@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李想 - 个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2d7ff9;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #f59e0b;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(to right, var(--primary), #2563eb);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 1.5rem;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-list {
+            list-style: none;
+        }
+        .contact-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .contact-list i {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+        .skill-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="avatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <h1>李想 (Xiang Li)</h1>
+        <p class="subtitle">东北农业大学 · 计算机科学与技术专业</p >
+        <div class="badge">专注前端开发与人工智能应用</div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2><i class="fas fa-user-circle"></i> 关于我</h2>
+            <div class="about-content">
+                <div>
+                    <p>您好！我是李想，东北农业大学计算机科学与技术专业在读学生，主修前端开发和人工智能应用方向。</p >
+                    <p>热衷于将创新技术应用于解决实际问题，擅长使用React/Vue构建响应式Web应用，同时对机器学习在农业领域的应用有深入研究。</p >
+                    <p>曾参与校智慧农业平台开发项目，负责数据可视化模块实现。</p >
+                </div>
+                <div>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>A20230133@neau.edu.cn</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>哈尔滨 · 东北农业大学</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>计算机科学与技术专业 · 本科</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-heart"></i>
+                            <span>Web开发 · 机器学习 · 数据可视化</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fas fa-laptop-code"></i> 技术能力</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>前端开发</h3>
+                    <p>HTML5/CSS3 · JavaScript(ES6+) · React.js · Vue.js · Bootstrap · Tailwind CSS</p >
+                </div>
+                <div class="skill-card">
+                    <h3>后端技术</h3>
+                    <p>Node.js · Express · MongoDB · RESTful API · Python Flask</p >
+                </div>
+                <div class="skill-card">
+                    <h3>数据科学</h3>
+                    <p>Python · Pandas · NumPy · Matplotlib · Scikit-learn</p >
+                </div>
+                <div class="skill-card">
+                    <h3>开发工具</h3>
+                    <p>Git/GitHub · VS Code · Docker · Webpack · Linux</p >
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2><i class="fas fa-project-diagram"></i> 项目经验</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>智慧农业数据平台</h3>
+                    <p>基于Vue.js和ECharts开发的农业数据可视化系统，集成土壤传感器数据实时展示功能</p >
+                </div>
+                <div class="skill-card">
+                    <h3>农作物病害识别系统</h3>
+                    <p>使用CNN卷积神经网络开发的Web应用，可识别10种常见作物病害，准确率92%</p >
+                </div>
+                <div class="skill-card">
+                    <h3>校园资源共享平台</h3>
+                    <p>东北农业大学校内资源交换平台，采用MERN技术栈（MongoDB, Express, React, Node）</p >
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 李想的个人主页 | 东北农业大学</p >
+        <div class="social-links">
+            <i class="fab fa-github"></i>
+            
+            
+            
+        </div>
+    </footer>
+</body>
+</html>
